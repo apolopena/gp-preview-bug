@@ -17,3 +17,7 @@ tasks:
   command: >
     apachectl start &&
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
+- name: Preview
+  command: >
+    sleep 3 &&
+    gp preview "$(gp url 8080)"
